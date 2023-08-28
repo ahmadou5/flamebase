@@ -117,9 +117,9 @@ export default function NetworkFilter() {
   const toggleMenu = useToggleModal(ApplicationModal.NETWORK_FILTER)
   useOnClickOutside(node, open ? toggleMenu : undefined)
   const navigate = useNavigate()
-  const base1 = 'base'
+ 
   const { chainName } = useParams<{ chainName?: string }>()
-  const currentChainName = validateUrlChainParam(base1)
+  const currentChainName = validateUrlChainParam(chainName)
 
   const chainInfo = getChainInfo(supportedChainIdFromGQLChain(currentChainName))
 
