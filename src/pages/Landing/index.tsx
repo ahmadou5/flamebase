@@ -80,7 +80,7 @@ const Glow = styled.div`
   position: absolute;
   top: 68px;
   bottom: 0;
-  background: radial-gradient(72.04% 72.04% at 50% 3.99%, #ff37eb 0%, rgba(166, 151, 255, 0) 100%);
+  background: radial-gradient(72.04% 72.04% at 50% 3.99%, #0066FF 0%, rgba(166, 151, 255, 0) 100%);
   filter: blur(72px);
   border-radius: 24px;
   max-width: 480px;
@@ -116,11 +116,11 @@ const TitleText = styled.h1<{ isDarkMode: boolean }>`
   margin: 0 0 24px;
   ${({ isDarkMode }) =>
     isDarkMode
-      ? css`
-          background: linear-gradient(20deg, rgba(255, 244, 207, 1) 10%, rgba(255, 87, 218, 1) 100%);
-        `
-      : css`
-          background: linear-gradient(10deg, rgba(255, 79, 184, 1) 0%, rgba(255, 159, 251, 1) 100%);
+    ? css`
+    background: #0066FF;
+   `
+   : css`
+    background: #0066FF
         `};
   background-clip: text;
   -webkit-background-clip: text;
@@ -162,13 +162,13 @@ const LandingButton = styled(BaseButton)`
 `
 
 const ButtonCTA = styled(LandingButton)`
-  background: linear-gradient(93.06deg, #ff00c7 2.66%, #ff9ffb 98.99%);
+  background: #0066FF;
   border: none;
   color: ${({ theme }) => theme.white};
   transition: ${({ theme }) => `all ${theme.transition.duration.medium} ${theme.transition.timing.ease}`};
 
   &:hover {
-    box-shadow: 0px 0px 16px 0px #ff00c7;
+    box-shadow: 0px 0px 16px 0px #0066FA;
   }
 `
 
@@ -206,7 +206,7 @@ const LearnMoreContainer = styled.div`
   transition: ${({ theme }) => `${theme.transition.duration.medium} ${theme.transition.timing.ease} opacity`};
 
   &:hover {
-    opacity: 0.6;
+    opacity: 0.7;
   }
 `
 
@@ -291,7 +291,7 @@ const LinkCss = css`
 const LandingSwap = styled(Swap)`
   ${SwapCss}
   &:hover {
-    border: 1px solid ${({ theme }) => theme.accent1};
+    border: 1px solid ${({ theme }) => theme.neutral3};
   }
 `
 
@@ -345,17 +345,17 @@ export default function Landing() {
         <ContentContainer isDarkMode={isDarkMode}>
           <TitleText isDarkMode={isDarkMode}>
             {shouldDisableNFTRoutes ? (
-              <Trans>Trade crypto with confidence</Trans>
+              <Trans>Swap Tokens Securely on Base Chain </Trans>
             ) : (
-              <Trans>Trade crypto and NFTs with confidence</Trans>
+              <Trans>Swap Tokens and NFTs Securely on Base Chain </Trans>
             )}
           </TitleText>
           <SubTextContainer>
             <SubText>
               {shouldDisableNFTRoutes ? (
-                <Trans>Buy, sell, and explore tokens</Trans>
+                <Trans>Swap ERC20 Tokens, and explore tokens</Trans>
               ) : (
-                <Trans>Buy, sell, and explore tokens and NFTs</Trans>
+                <Trans>Swap, Flip, and explore tokens and NFTs</Trans>
               )}
             </SubText>
           </SubTextContainer>
@@ -367,7 +367,7 @@ export default function Landing() {
             >
               <ButtonCTA as={Link} to="/swap">
                 <ButtonCTAText>
-                  <Trans>Get started</Trans>
+                  <Trans>Trade</Trans>
                 </ButtonCTAText>
               </ButtonCTA>
             </TraceEvent>
@@ -377,20 +377,11 @@ export default function Landing() {
               cardsRef?.current?.scrollIntoView({ behavior: 'smooth' })
             }}
           >
-            <Trans>Learn more</Trans>
+            <Trans>Buy $FLAME</Trans>
             <LearnMoreArrow />
           </LearnMoreContainer>
 
-          <DownloadWalletLink
-            {...getDownloadAppLinkProps({
-              // landing page specific tracking params
-              microSiteParams: `utm_source=home_page&utm_medium=webapp&utm_campaign=wallet_microsite&utm_id=1`,
-              appStoreParams: `ct=Uniswap-Home-Page&mt=8`,
-            })}
-          >
-            <AppleLogo width="20" height="20" />
-            Download the Uniswap Wallet for iOS
-          </DownloadWalletLink>
+          
         </ContentContainer>
         <AboutContentContainer isDarkMode={isDarkMode}>
           <CardGrid cols={cards.length} ref={cardsRef}>

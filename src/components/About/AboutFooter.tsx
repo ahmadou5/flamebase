@@ -114,7 +114,7 @@ const LogoSectionContent = () => {
   const isDarkMode = useIsDarkMode()
   return (
     <>
-      <StyledLogo src={isDarkMode ? darkUnicornImgSrc : lightUnicornImgSrc} alt="Uniswap Logo" />
+      {/**<StyledLogo src={isDarkMode ? darkUnicornImgSrc : lightUnicornImgSrc} alt="Uniswap Logo" />**/}
       <SocialLinks>
         <SocialLink href="https://discord.gg/FCfyBSbCU5" target="_blank" rel="noopener noreferrer">
           <DiscordIcon size={32} />
@@ -132,7 +132,7 @@ const LogoSectionContent = () => {
           <GithubIcon size={32} />
         </SocialLink>
       </SocialLinks>
-      <Copyright>© {new Date().getFullYear()} Uniswap Labs</Copyright>
+      <Copyright>© {new Date().getFullYear()} Flame Labs</Copyright>
     </>
   )
 }

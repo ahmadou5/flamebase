@@ -86,7 +86,7 @@ export default function SettingsMenu({
           <ToggleWrapper>
             <ThemeToggle />
             <SmallBalanceToggle />
-            <AnalyticsToggle />
+            {/**<AnalyticsToggle />**/}
             <TestnetsToggle />
           </ToggleWrapper>
           {!currencyConversionEnabled && (

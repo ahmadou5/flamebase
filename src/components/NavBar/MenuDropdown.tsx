@@ -150,22 +150,7 @@ export const MenuDropdown = () => {
                     </PrimaryMenuRow.Text>
                   </PrimaryMenuRow>
                 </Box>
-                <Box
-                  onClick={() =>
-                    openDownloadApp({
-                      element: InterfaceElementName.UNISWAP_WALLET_MODAL_DOWNLOAD_BUTTON,
-                    })
-                  }
-                >
-                  <PrimaryMenuRow close={toggleOpen}>
-                    <Icon>
-                      <AppleLogo width="24px" height="24px" fill={theme.neutral1} />
-                    </Icon>
-                    <PrimaryMenuRow.Text>
-                      <Trans>Download Uniswap Wallet</Trans>
-                    </PrimaryMenuRow.Text>
-                  </PrimaryMenuRow>
-                </Box>
+                
                 <PrimaryMenuRow to="/vote" close={toggleOpen}>
                   <Icon>
                     <GovernanceIcon width={24} height={24} color={theme.neutral1} />
@@ -197,22 +182,7 @@ export const MenuDropdown = () => {
                 <SecondaryLinkedText href="https://docs.uniswap.org/">
                   <Trans>Documentation</Trans> ↗
                 </SecondaryLinkedText>
-                <SecondaryLinkedText href="https://uniswap.canny.io/feature-requests">
-                  <Trans>Feedback</Trans> ↗
-                </SecondaryLinkedText>
-                <SecondaryLinkedText
-                  onClick={() => {
-                    toggleOpen()
-                    togglePrivacyPolicy()
-                  }}
-                >
-                  <Trans>Legal & Privacy</Trans> ↗
-                </SecondaryLinkedText>
-                {(isDevelopmentEnv() || isStagingEnv()) && (
-                  <SecondaryLinkedText onClick={openFeatureFlagsModal}>
-                    <Trans>Feature Flags</Trans>
-                  </SecondaryLinkedText>
-                )}
+                
               </Box>
               <IconRow>
                 <Icon href="https://discord.com/invite/FCfyBSbCU5">

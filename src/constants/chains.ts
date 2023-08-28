@@ -5,7 +5,7 @@ export const UniWalletSupportedChains = [
   ChainId.ARBITRUM_ONE,
   ChainId.OPTIMISM,
   ChainId.POLYGON,
-  ChainId.BASE,
+  //ChainId.BASE,
 ]
 
 export const CHAIN_IDS_TO_NAMES = {
@@ -27,7 +27,21 @@ export const CHAIN_IDS_TO_NAMES = {
 } as const
 
 // Include ChainIds in this array if they are not supported by the UX yet, but are already in the SDK.
-const NOT_YET_UX_SUPPORTED_CHAIN_IDS: number[] = []
+const NOT_YET_UX_SUPPORTED_CHAIN_IDS: number[] = [ ChainId.GOERLI,
+  ChainId.MAINNET,
+  ChainId.GOERLI,
+  ChainId.SEPOLIA,
+  ChainId.POLYGON,
+  ChainId.POLYGON_MUMBAI,
+  ChainId.CELO,
+  ChainId.CELO_ALFAJORES,
+  ChainId.BNB,
+  ChainId.AVALANCHE,
+  ChainId.SEPOLIA,
+  ChainId.POLYGON_MUMBAI,
+  ChainId.ARBITRUM_GOERLI,
+  ChainId.OPTIMISM_GOERLI,
+  ChainId.CELO_ALFAJORES,]
 
 export function isSupportedChain(
   chainId: number | null | undefined | ChainId,
@@ -67,12 +81,7 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
 export const SUPPORTED_V2POOL_CHAIN_IDS = [ChainId.MAINNET, ChainId.GOERLI] as const
 
 export const TESTNET_CHAIN_IDS = [
-  ChainId.GOERLI,
-  ChainId.SEPOLIA,
-  ChainId.POLYGON_MUMBAI,
-  ChainId.ARBITRUM_GOERLI,
-  ChainId.OPTIMISM_GOERLI,
-  ChainId.CELO_ALFAJORES,
+ 
   ChainId.BASE_GOERLI,
 ] as const
 
@@ -80,15 +89,7 @@ export const TESTNET_CHAIN_IDS = [
  * All the chain IDs that are running the Ethereum protocol.
  */
 export const L1_CHAIN_IDS = [
-  ChainId.MAINNET,
-  ChainId.GOERLI,
-  ChainId.SEPOLIA,
-  ChainId.POLYGON,
-  ChainId.POLYGON_MUMBAI,
-  ChainId.CELO,
-  ChainId.CELO_ALFAJORES,
-  ChainId.BNB,
-  ChainId.AVALANCHE,
+  
 ] as const
 
 export type SupportedL1ChainId = (typeof L1_CHAIN_IDS)[number]
@@ -98,10 +99,7 @@ export type SupportedL1ChainId = (typeof L1_CHAIN_IDS)[number]
  * The expectation is that all of these networks have immediate transaction confirmation.
  */
 export const L2_CHAIN_IDS = [
-  ChainId.ARBITRUM_ONE,
-  ChainId.ARBITRUM_GOERLI,
-  ChainId.OPTIMISM,
-  ChainId.OPTIMISM_GOERLI,
+  
   ChainId.BASE,
   ChainId.BASE_GOERLI,
 ] as const

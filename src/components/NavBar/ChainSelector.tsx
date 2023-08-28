@@ -12,7 +12,7 @@ import {
   L1_CHAIN_IDS,
   L2_CHAIN_IDS,
   TESTNET_CHAIN_IDS,
-  UniWalletSupportedChains,
+  //UniWalletSupportedChains,
 } from 'constants/chains'
 import { useOnClickOutside } from 'hooks/useOnClickOutside'
 import useSelectChain from 'hooks/useSelectChain'
@@ -45,8 +45,8 @@ function useWalletSupportedChains(): ChainId[] {
   switch (connectionType) {
     case ConnectionType.WALLET_CONNECT_V2:
       return getSupportedChainIdsFromWalletConnectSession((connector as WalletConnectV2).provider?.session)
-    case ConnectionType.UNISWAP_WALLET_V2:
-      return UniWalletSupportedChains
+    //case ConnectionType.UNISWAP_WALLET_V2:
+     // return UniWalletSupportedChains
     default:
       return NETWORK_SELECTOR_CHAINS
   }
@@ -85,7 +85,7 @@ export const ChainSelector = ({ leftAlign }: ChainSelectorProps) => {
   const modalRef = useRef<HTMLDivElement>(null)
   useOnClickOutside(ref, () => setIsOpen(false), [modalRef])
 
-  const info = getChainInfo(chainId)
+  const info = getChainInfo(8453)
 
   const selectChain = useSelectChain()
   useSyncChainQuery()

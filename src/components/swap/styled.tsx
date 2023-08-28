@@ -30,7 +30,7 @@ export const SwapWrapper = styled.main<{ isDark?: boolean }>`
   padding: 8px;
   padding-top: 12px;
   box-shadow: ${({ isDark }) =>
-    `0px 0px 10px 0px rgba(252, 114, 255, ${isDark ? '0.08' : '0.04'}), 0px 40px 120px 0px rgba(252, 114, 255, ${
+    `#FFFFFF, ${isDark ? '0.08' : '0.04'}), #0066FF, ${
       isDark ? '0.18' : '0.12'
     })`};
   z-index: ${Z_INDEX.default};

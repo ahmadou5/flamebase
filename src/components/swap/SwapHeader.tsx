@@ -36,7 +36,7 @@ export default function SwapHeader({
         <ThemedText.SubHeader>
           <Trans>Swap</Trans>
         </ThemedText.SubHeader>
-        {fiatOnRampButtonEnabled && <SwapBuyFiatButton />}
+        {/**{fiatOnRampButtonEnabled && <SwapBuyFiatButton />}**/}
       </HeaderButtonContainer>
       <RowFixed>
         <SettingsTab autoSlippage={autoSlippage} chainId={chainId} trade={trade} />
