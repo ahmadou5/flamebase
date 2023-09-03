@@ -11,17 +11,17 @@ const LastUpdatedText = styled.span`
   color: ${({ theme }) => theme.neutral3};
 `
 
-const LAST_UPDATED_DATE = '6.7.23'
+const LAST_UPDATED_DATE = '1.9.23'
 
 export default function PrivacyPolicyNotice() {
   return (
     <ThemedText.BodySmall color="neutral2">
-      <Trans>By connecting a wallet, you agree to Uniswap Labs&apos;</Trans>{' '}
-      <StyledLink href="https://uniswap.org/terms-of-service/">
+      <Trans>By connecting a wallet, you agree to Flames Labs&apos;</Trans>{' '}
+      <StyledLink href="">
         <Trans>Terms of Service</Trans>{' '}
       </StyledLink>
       <Trans>and consent to its</Trans>{' '}
-      <StyledLink href="https://uniswap.org/privacy-policy">
+      <StyledLink href="">
         <Trans>Privacy Policy.</Trans>
       </StyledLink>
       <LastUpdatedText>

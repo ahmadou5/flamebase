@@ -147,7 +147,7 @@ function getPendingConfirmationContent({
       subtitle: tradeSummary,
       bottomLabel: (
         <ExternalLink href="https://support.uniswap.org/hc/en-us/articles/17515415311501" color="neutral2">
-          <Trans>Learn more about swapping with UniswapX</Trans>
+          <Trans>Learn more about swapping with FlameX</Trans>
         </ExternalLink>
       ),
     }
@@ -213,7 +213,7 @@ function useStepContents(args: ContentArgs): Record<PendingConfirmModalState, Pe
         bottomLabel: revocationPending ? t`Pending...` : t`Proceed in your wallet`,
       },
       [ConfirmModalState.APPROVING_TOKEN]: {
-        title: t`Enable spending ${approvalCurrency?.symbol ?? 'this token'} on Uniswap`,
+        title: t`Enable spending ${approvalCurrency?.symbol ?? 'this token'} on FlameFinance`,
         subtitle: (
           <ExternalLink href="https://support.uniswap.org/hc/en-us/articles/8120520483085">
             <Trans>Why is this required?</Trans>
