@@ -1,4 +1,5 @@
 import { ChainId, SUPPORTED_CHAINS, SupportedChainsType } from '@uniswap/sdk-core'
+import { Chain } from 'graphql/data/Token'
 
 export const UniWalletSupportedChains = [
   ChainId.MAINNET,
@@ -81,8 +82,8 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
 export const SUPPORTED_V2POOL_CHAIN_IDS = [ChainId.MAINNET, ChainId.GOERLI] as const
 
 export const TESTNET_CHAIN_IDS = [
- 
-  ChainId.BASE_GOERLI,
+ ChainId.ARBITRUM_GOERLI
+  //ChainId.BASE_GOERLI,
 ] as const
 
 /**
@@ -100,7 +101,7 @@ export type SupportedL1ChainId = (typeof L1_CHAIN_IDS)[number]
  */
 export const L2_CHAIN_IDS = [
   
-  ChainId.BASE,
+  //ChainId.BASE,
   ChainId.BASE_GOERLI,
 ] as const
 

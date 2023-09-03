@@ -1,7 +1,9 @@
 // Based mostly on https://github.com/Uniswap/interface/blob/main/src/theme/index.tsx
 
+
 export const colors = {
-  white: '#FFFFFF',
+  white1: '#FFFFFF',
+  white: 'linear-gradient(315deg, #5078f2 0%, #efe9f4 74%)',
   black: '#000000',
   gray50: '#F5F6FC',
   gray100: '#E8ECFB',
